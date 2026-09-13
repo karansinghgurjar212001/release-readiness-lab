@@ -6,7 +6,7 @@ Record this as a screen share with your camera visible. Open the PR and show the
 
 **0:45–1:45 — Changes.** Show the seven pack files. Show the mandatory Secret references, deploy preflight, and `/health` returning 503 for missing settings. Show the upgraded Flask and pytest pins after the original audit found advisories. The architecture document now describes the required production configuration.
 
-**1:45–2:45 — Evidence.** Show `evidence/local-validation.txt`: Python syntax passed, four tests passed, and `pip check` found no broken requirements. Show the dependency audit's repeated result of no known vulnerabilities, plus branch CI once it is green. Explain that a placeholder URL in a unit test proves configuration presence only. Docker and live connectivity were unavailable locally, so they remain unverified.
+**1:45–2:45 — Evidence.** Show `local-validation.txt`: Python syntax passed, four tests passed, and `pip check` found no broken requirements. Show the dependency audit's repeated result of no known vulnerabilities and the linked PR CI run, including its Docker dry-run build. Explain that a placeholder URL in a unit test proves configuration presence only. Container startup and live connectivity remain unverified.
 
 **2:45–3:45 — Recovery and risks.** Show the rollback runbook and stable v2.3 target from `docs/architecture.md`. Explain the need to verify its image digest and rehearse rollback before deployment. Show at least five risk rows and point out the open High risks: environment, rollback, ownership, image/rollout evidence and dependency health.
 
